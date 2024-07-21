@@ -8,5 +8,3 @@ def hello(event, context):
     }
 
     return {"statusCode": 200, "body": json.dumps(body)}
-git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
