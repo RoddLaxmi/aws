@@ -59,20 +59,6 @@ jobs:
           name: Deploy application
           command: |
             export SLS_DEBUG=*
-             
-            echo "Which branch did this commit come from?"
-            echo $CIRCLE_BRANCH
-            echo "================="
-            if [[ $CIRCLE_BRANCH == "development" ]]; then
-               echo "Development branch"
-               export DEPLOYMENT_STAGE='dev'
-            else
-               echo "Production branch"
-               export DEPLOYMENT_STAGE='prod'
-            fi
-            echo "================="
-            echo "Which stage are we deploying to?"
-            echo $DEPLOYMENT_STAGE
             sls deploy --stage $DEPLOYMENT_STAGE
             sls prune -n 3 --stage $DEPLOYMENT_STAGE # prune up to latest 3 versions of deployments
  
