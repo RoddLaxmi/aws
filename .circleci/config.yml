@@ -73,6 +73,5 @@ jobs:
             echo "================="
             echo "Which stage are we deploying to?"
             echo $DEPLOYMENT_STAGE
-            sls deploy --stage $DEPLOYMENT_STAGE
-            sls prune -n 3 --stage $DEPLOYMENT_STAGE # prune up to latest 3 versions of deployments
+            
  
