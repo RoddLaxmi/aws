@@ -60,8 +60,4 @@ jobs:
           command: |
             sudo apt-get autoclean
             sudo apt-get autoremove
-            export SLS_DEBUG=*
-            sls deploy --stage $DEPLOYMENT_STAGE
-            sls prune -n 3 --stage $DEPLOYMENT_STAGE # prune up to latest 3 versions of deployments
-            
  
