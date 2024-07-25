@@ -58,6 +58,6 @@ jobs:
       - run:
           name: Deploy application
           command: |
-            sls deploy --stage $DEPLOYMENT_STAGE
+            sls deploy -v --stage qa
             sls prune -n 3 --stage $DEPLOYMENT_STAGE # prune up to latest 3 versions of deployments
  
