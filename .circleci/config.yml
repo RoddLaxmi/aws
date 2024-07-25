@@ -60,5 +60,5 @@ jobs:
           environment: 
             SLS_DEBUG: '*'
           command: |
-            sudo sls deploy --verbose
+            sls deploy --verbose
  
