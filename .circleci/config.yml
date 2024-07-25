@@ -57,6 +57,8 @@ jobs:
         
       - run:
           name: Deploy application
+          environment: 
+            SLS_DEBUG: '*'
           command: |
-            sls deploy 
+            sls deploy -v
  
